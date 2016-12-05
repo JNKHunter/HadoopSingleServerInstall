@@ -55,7 +55,7 @@ export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
 
 Note: This value of JAVA_HOME will override any environment variable you may have set in ~/.bash_profile or ~/.bash_rc
 
-If you don't want to set the link dynamically like specified above, you can set the link to Java home using a static link.
+You can alternatively set a static link (rather than a dynamic link using readlink | sed).
 
 
 
