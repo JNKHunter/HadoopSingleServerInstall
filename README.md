@@ -74,4 +74,43 @@ cp /usr/local/hadoop/etc/hadoop/*.xml ~/input
 /usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.3.jar grep ~/input ~/grep_example 'principal[.]*'
 ```
 
+Output should look similar to:
+
+```
+File System Counters
+                FILE: Number of bytes read=1247674
+                FILE: Number of bytes written=2324248
+                FILE: Number of read operations=0
+                FILE: Number of large read operations=0
+                FILE: Number of write operations=0
+        Map-Reduce Framework
+                Map input records=2
+                Map output records=2
+                Map output bytes=37
+                Map output materialized bytes=47
+                Input split bytes=114
+                Combine input records=0
+                Combine output records=0
+                Reduce input groups=2
+                Reduce shuffle bytes=47
+                Reduce input records=2
+                Reduce output records=2
+                Spilled Records=4
+                Shuffled Maps =1
+                Failed Shuffles=0
+                Merged Map outputs=1
+                GC time elapsed (ms)=61
+                Total committed heap usage (bytes)=263520256
+        Shuffle Errors
+                BAD_ID=0
+                CONNECTION=0
+                IO_ERROR=0
+                WRONG_LENGTH=0
+                WRONG_MAP=0
+                WRONG_REDUCE=0
+        File Input Format Counters
+                Bytes Read=151
+        File Output Format Counters
+                Bytes Written=37
+```
 
