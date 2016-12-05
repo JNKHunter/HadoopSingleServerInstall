@@ -64,5 +64,14 @@ Test hadoop:
 /usr/local/hadoop/bin/hadoop
 ```
 
+Step 5 - Run an example mapreduce job
+```
+mkdir ~/input
+cp /usr/local/hadoop/etc/hadoop/*.xml ~/input
+```
+
+```
+/usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.3.jar grep ~/input ~/grep_example 'principal[.]*'
+```
 
 
