@@ -23,7 +23,7 @@ java -version
 Go to Hadoop releases page
 [http://hadoop.apache.org/releases.html]
 
-Click on the binary of the release tarball you'd like. On the next page copy the link of the download mirror.
+Click on the binary of the release tarball you'd like to use. On the next page copy the link of the download mirror.
 
 Download to a directory on your computer:
 ```
@@ -41,4 +41,23 @@ Move the extracted files into /usr/local
 ```
 sudo mv hadoop-2.7.3 /usr/local/hadoop
 ```
+## Step 3 - Configure Hadoop
+Open hadoop-env.sh
 
+```
+sudo vim /usr/local/hadoop/etc/hadoop/hadoop-env.sh
+```
+
+Set the value for JAVA_HOME
+```
+export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
+```
+
+Note: This value of JAVA_HOME will override any environment variable you may have set in ~/.bash_profile or ~/.bash_rc
+
+If you don't want to set the link dynamically like specified above, you can set the link to Java home using a static link.
+
+
+
+
+```
