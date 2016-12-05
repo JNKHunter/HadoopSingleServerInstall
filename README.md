@@ -57,7 +57,12 @@ Note: This value of JAVA_HOME will override any environment variable you may hav
 
 You can alternatively set a static link (rather than a dynamic link using readlink | sed).
 
+Step 4 - Run Hadoop
 
-
-
+Test hadoop:
 ```
+/usr/local/hadoop/bin/hadoop
+```
+
+
+
